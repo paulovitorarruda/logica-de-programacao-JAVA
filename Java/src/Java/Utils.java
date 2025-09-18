@@ -10,6 +10,13 @@ public class Utils {
 	public float peso2 = 72f;
 	public String nome = "Paulo";
 	
+	public Utils(double peso,String nome) {
+		this.nome = nome;
+		this.peso = peso;
+		//System.out.println(this.nome);
+		//System.out.println(nome);
+	}
+	
 	public void printHelloWorld() {
 		idade = 21;
 		printOutraCoisa();
