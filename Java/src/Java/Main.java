@@ -1,62 +1,37 @@
 package Java;
 
-public class Main implements Testes{
-/*interface*/
+public class Main{
+	
+    public int[] numeros = {10,20,30};
+	
+	public Main() {
+		int soma = 0;
+		for(int i = 0; i < numeros.length; i++) {
+			soma+=numeros[i];	
+		}
+		System.out.println(soma);
+	
+	/*public char[] nome = {'P','a','u','l','o'};
+	
+	public Main() {
+		String nomeCompleto = "";
+		for(int i = 0; i < nome.length; i++) {
+			nomeCompleto+=nome[i];	
+		}
+		System.out.println(nomeCompleto);*/
+		
+		/*for(int i = 0; i < nome.length; i++) {
+			System.out.println(nome[i]);
+		}*/
+		
+		/*System.out.println(nome[0]);*/
+	    
+		/*nome[0] = 'p';
+		System.out.println(nome[0]);*/
+	}
+	
 	public static void main(String args[]) {
-		
-	}
-
-	@Override
-	public void metodo() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void metodo2() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public int metodo3() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-}
-
-
-//class abstract
-/*
-	public static void main(String args[]) {
-		Main.testes2();
+		new Main();
 	}
 	
 }
-	
-	
-	
-	public Main(double peso, String nome) {
-		super(peso,nome);
-		
-		//class pivada
-		new Teste();
-	}
-	
-	
-	public static void main(String[] args) {
-		//class privada
-		new Main2();
-		
-		//protected
-		System.out.println(main.nome2);	
-}
-}
-
-//class privada 
-class Teste{
-	public void print() {
-		System.out.println("OKAY!");
-	}
-}
-*/
