@@ -6,58 +6,52 @@ public class Main{
 	
 	public static void main(String args[]) {
 		Scanner scanner = new Scanner(System.in);
-		double tempoAntigo = System.currentTimeMillis();
-		
-		String s = scanner.nextLine();
-		
-		
-		if(Main.convertTime(System.currentTimeMillis() - tempoAntigo) >= 2) {
-			if(s.length() >=5) {
-				System.out.println("Show! A mensagem é "+s);
+		int pontos = 0;
+		System.out.println("Bem-vindo! Pressione 's' para continuar.");
+		String string = scanner.nextLine();
+		if(string.equals("s")) {
+			System.out.println("Qual a capital do Brasil?");
+			string = scanner.nextLine();
+			if(string.equals("Brasília")) {
+				pontos++;
+				System.out.println("Você pontuou!");
+				System.out.println("Você deseja continuar? (s) ou desistir? (d)");
+				string = scanner.nextLine();
+				if(string.equals("s")) {
+					//Próxima pergunta.
+					System.out.println("Em qual continente fica o Brasil?");
+					string = scanner.nextLine();
+					if(string.equals("América do Sul")) {
+						pontos++;
+						System.out.println("Você pontuou!");
+						System.out.println("Você deseja continuar? (s) ou desistir? (d)");
+						string = scanner.nextLine();
+						if(string.equals("s")) {
+							System.out.println("Qual a linguagem que está estudando?");
+							string = scanner.nextLine();
+							if(string.equals("Java")) {
+								pontos++;
+								System.out.println("Você ganhou!");
+								System.out.println("Sua pontuação final foi de:" +pontos);
+							}else {
+								System.out.println("Game Over! Sua pontuação foi de:" +pontos);
+							}
+						}else {
+							System.out.println("Game Over! Sua pontuação foi de:" +pontos);
+						}
+					}else {
+						System.out.println("Game Over! Sua pontuação foi de:" +pontos);
+					}
+				}else {
+					System.out.println("Game Over! Sua pontuação foi de:" +pontos);
+				}
 			}else {
-				System.out.println("Sua mensagem é muito curta!");
+				System.out.println("Game Over! Sua pontuação foi de:" +pontos);
 			}
 		}else {
-			System.out.println("Ops! Você precisa esperar pelo menos 2 segundos.");
-			System.out.println("Vamos tentar novamente?");
-			tempoAntigo = System.currentTimeMillis();
-			s = scanner.nextLine();
-			if(Main.convertTime(System.currentTimeMillis() - tempoAntigo) >= 2) {
-				System.out.println("Agora sim!");
-			}else {
-				System.out.println("Você falhou 2x! Acabamos o programa!");
-			}
+			System.out.println("Acabou o jogo... Você pontuou 0!");
 		}
 	}
 	
-	public static double convertTime(double tempo) {
-		return tempo/1000;
-	}
 }
-
-/*{	public static void main(String args[]) {
-		Scanner scanner = new Scanner(System.in);
-		double tempoAntigo = System.currentTimeMillis();
-		
-		String s = scanner.nextLine();
-		
-		
-		if(Main.convertTime(System.currentTimeMillis() - tempoAntigo) >= 2) {
-			System.out.println(s);
-		}
-	}
 	
-	public static double convertTime(double tempo) {
-		return tempo/1000;
-	}
-}
-*/
-/*{
-    public static void main(String args[]) {
-	    Scanner scanner = new Scanner(System.in);
-	    String s = scanner.nextLine();
-	    
-	    System.out.println(s);	 
-	}
-
-}*/
